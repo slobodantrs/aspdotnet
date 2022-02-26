@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+  
+    
+    <!-- Required meta tags -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+   
+
+    <!-- Bootstrap CSS -->
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+
+    <title>Create products</title>
+  </head>
+  <body>
+    <div>
+      <h1>Create new product</h1>
+    </div>
+    <div id="createForm">
+        
+        
+        <form action="javascript:void(0);" onsubmit="createItem()">
+            <input type="hidden" id="create-id" class="form-control">
+            <div class="form-group row">
+                <div class="col-4">
+                    <label >Name</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="create-name" class="form-control">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label>Color:</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="create-color" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label >Size</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="create-size" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label >Price:</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="create-price" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-4">
+                    <label >Quantity:</label>
+                </div>
+                <div class="col-6">
+                    <input type="text" id="create-quantity" class="form-control" />
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-3">
+                    <input type="submit" class="btn btn-primary" value="Create"  method="post" />
+                </div>
+                <div class="col-3">
+                    <a href="https://localhost:5021/" class="btn btn-success form-control" >Back to list</a>
+                </div>
+            </div>
+        </form>
+    </div>
+    
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js">
+ 
+  <script
+    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"
+  ></script>
+
+    <script type="text/javascript" src="js/create.js"></script>
+  </body>
+</html>

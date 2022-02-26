@@ -1,0 +1,30 @@
+body {
+    background-color: azure;
+  }
+  .link {
+    width: 200px;
+    height: 200px;
+  }
+  .img-feature {
+    width: 100%;
+    padding: 5px;
+    height: auto;
+  }
+  .productList{
+    width: 100%;
+    height: auto;
+    /*border: solid thick #11bb22;*/
+  }
+  .productsTable{
+    margin-left: auto;
+    margin-right: auto;
+    width: 80%;
+  }
+  .productsTable td{
+    width: 20%;
+    margin: 5px;
+    height: auto;
+    border-top: solid thick #11bba2;
+    border-bottom: solid thick #11bba2;
+  }
+  
