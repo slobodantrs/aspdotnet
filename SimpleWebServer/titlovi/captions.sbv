@@ -1,0 +1,193 @@
+0:00:00.000,0:00:07.275
+Zdravo svima u današnjem videu pokazaćemo kako se može kreirati jedan jednostavan web server
+
+0:00:07.275,0:00:19.343
+Web server je proces ili aplikacija koja na zahtev nekog klijenta može da vrati nekakav odgovarajući rezultat
+
+0:00:19.343,0:00:30.308
+Npr. ako koristimo neki od web pretraživača i ako u polju za url adrese ukucam na primer localhost:5000
+
+0:00:30.308,0:00:33.747
+i ako postoji neki proces koji može da odgovori na ovakav zahtev
+
+0:00:33.747,0:00:39.714
+i pošalje pretraživaču nazad odgovor na primer nekakvu poruku,
+
+0:00:39.714,0:00:45.068
+onda možemo reći da taj proces ili aplikacija u stvari web server.
+
+0:00:45.068,0:00:50.688
+Pre nego što napravimo jedan ovakav web serveri potrebno je da proverimo
+
+0:00:50.688,0:00:56.958
+da li imamo instaliranu odgovoriću dotnet verziju, ako nemamo trebamo trebamo da je instaliramo.
+
+0:00:56.958,0:01:03.752
+Potreban nam je takođe, nije obavezan, ali bi bilo dobro da imamo i jedan od alata za pravljenje web aplikacija
+
+0:01:03.752,0:01:11.135
+na primer VS Code i njega ćemo takođe instalirati, ukoliko je to potrebno.
+ 
+
+0:01:11.135,0:01:20.996
+Otvorimo sada command prompt i premestimo se do foldera koji će nam predstavljati root folder za ovaj projekat.
+
+0:01:20.996,0:01:29.357
+Proverićemo sada da li postoji neka verzija dotnet-a instalirana
+
+0:01:29.357,0:01:38.240
+Otkucajmo dotnet --version
+
+0:01:38.240,0:01:45.033
+Evo vidimo da je ovde verzija 5.0 instalirana
+
+0:01:45.033,0:01:50.839
+U slučaju da nije treba otići na Google na odgovarajući sajt i preuzeti.
+
+0:01:50.839,0:01:55.734
+dotnet framework možemo naći na sledećoj url adresi:
+
+0:01:55.734,0:02:04.401
+I ovde treba naći odgovarajuću verziju, najbolje preporučenu verziju koju trebate da preuzmete.
+
+0:02:04.401,0:02:10.638
+Visual studio code možete naći na sledeći url na adresi:
+
+0:02:10.638,0:02:16.435
+i takođe, po potrebi preuzeti ga i instalirati. 
+
+0:02:16.435,0:02:24.225
+Kreirajmo sada taj web server. Koristi ćemo dotnet CLI. Dakle,
+
+0:02:24.225,0:02:32.586
+komande koje se instaliraju zajedno sa dotnet - om, na primer za kreiranje nove aplikacije.
+
+0:02:32.586,0:02:40.424
+Možete ukucati dotnet new web
+
+0:02:40.424,0:02:47.235
+Posle ovoga se unutar root foldera kreiraju određeni početni fajlovi aplikacije.
+
+0:02:47.235,0:02:55.135
+Evo ovde vidimo sada kako izgleda root folder aplikacije. Kreirani su neki folderi i fajlovi.
+
+0:02:55.135,0:03:02.893
+Da mi pokrenuli sada ovu aplikaciju treba ukucati komadu "dotnet run"
+
+0:03:04.008,0:03:10.225
+I vidimo sada u Command Prompt-u kako se kreiraju izvršni fajlovi
+
+0:03:12.080,0:03:19.165
+Ovde vidimo par informacija recimo vidimo koju web adresu treba ukucati u pretraživaču
+
+0:03:19.165,0:03:21.875
+da bi smo pokrenuli web server.
+
+0:03:22.489,0:03:25.719
+Dakle, localhost:5000/
+
+0:03:25.719,0:03:29.200
+Otvorićemo sada web pretraživač i
+
+0:03:29.435,0:03:35.158
+u URL address bar-u otkucati adresu koju ste malo pre videli: "localhost:5000"
+
+0:03:35.686,0:03:39.155
+Ovim upućujemo zahtev pokrenutom web serveru
+
+0:03:40.013,0:03:43.962
+Vidimo odgovor koji smo dobili, a to je poruka "hello World".
+
+0:03:45.823,0:03:49.946
+Prekinućemo sada proces pritiskom tastera "ctrl + c"
+
+0:03:50.077,0:03:55.814
+Da bismo otvorili "visual studio code" i izmenili nešto u tom kodu ili pregledali postojeći
+
+0:03:56.158,0:03:59.409
+ukucaćemo komandu: "code ."
+
+0:04:02.938,0:04:10.725
+Sada se otvorio visual studio code. Vidimo sada sa leve strane u exploreru ovu aplikaciju 
+
+0:04:10.725,0:04:17.233
+koja se zove "simple web server" Sa desne strane vidimo u početnu stranicu "Get Started".
+
+0:04:18.735,0:04:24.225
+Ovde vidimo fajlove ove aplikacije. Početak je fajl Program.cs
+
+0:04:24.599,0:04:27.719
+Ovde se vidi Main metoda koja je i početak programa,
+
+0:04:28.039,0:04:38.023
+gde se kreira okruženje Host-a. Ovde u ovom redu vidimo da se za podešavanja koristi Startup.cs fajl
+
+0:04:39.769,0:04:43.938
+I ovde imamo dve karakteristčne metode ConfigureServis().
+
+0:04:43.938,0:04:49.068
+Dakle ovde dodajemo servise koji će biti dostupni u aplikaciji
+
+0:04:49.068,0:04:51.269
+Odnosno u nekim klasama unutar aplikacije
+
+0:04:51.269,0:04:55.189
+i u metodi Configure govorimo aplikaciji šta treba da radi
+
+0:04:55.538,0:04:57.308
+odnosno serveru šta treba da radi.
+
+0:04:57.308,0:05:00.911
+U ovom redu vidimo da je mapiran GET zahtev
+
+0:05:01.288,0:05:08.770
+koji nema ništa posle poziva servera sem kose crte
+
+0:05:08.844,0:05:15.366
+Ovde vidimo kako se kreira odgovor. U ovom slučaju odgovor je  samo poruka "Hello world".
+
+0:05:15.818,0:05:22.849
+Ovu poruku ste videli kao odgovor pri pokretanju Google Chrom-a i poziva localhost:5000
+
+0:05:23.629,0:05:28.232
+Dodaćemo još jednu metodu koje će da odgovori na drugi GET zahtev
+
+0:05:29.090,0:05:34.929
+Recimo da želimo da nam se prikaže sistemsko vreme na serveru
+
+0:05:35.137,0:05:38.300
+Dodaćemo sada još jednu metodu
+
+0:05:43.016,0:05:51.838
+Recimo kada se u adress baru ukuca localhost:5000/time
+
+0:05:52.829,0:05:55.920
+Odgovor koji treba dobiti jeste sistemsko vreme
+
+0:06:00.249,0:06:04.983
+Zamenićemo sada tekst i uneti "Time:"
+
+0:06:05.943,0:06:13.894
+I da bi smo dobili sistemsko vreme biće nam potrebna klasa DateTime
+
+0:06:16.468,0:06:21.000
+Metoda "Now" da je sistemsko vreme i
+
+0:06:21.340,0:06:27.816
+i pozvaćemo i "ToString" da se vreme lepo prikaže kao tekst
+
+0:06:31.636,0:06:33.636
+vreme
+
+0:06:34.334,0:06:37.032
+Startujmo sada ponovo sever
+
+0:06:39.068,0:06:46.510
+Ukucaćemo komandu "dotnet run", a zatim u pretraživaču ukucajte sledeću komandu:
+
+0:06:54.154,0:07:00.569
+localhost:5000/time
+
+0:07:02.232,0:07:08.672
+I eto vidimo kakav se odgovor dobija, a to je vreme na tom serveru.
+

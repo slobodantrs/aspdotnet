@@ -1,0 +1,193 @@
+0:00:00.000,0:00:07.275
+Hello everyone! In today's video we will show how a simple web server can be created.
+
+0:00:07.275,0:00:19.343
+A web server is a process or application that, at the request of a client, can return an appropriate result.
+
+0:00:19.343,0:00:30.308
+For example. if we use one of the web browsers and if I type for example localhost: 5000 in the url field...
+
+0:00:30.308,0:00:33.747
+and if there is a process that can respond to such a request  
+
+0:00:33.747,0:00:39.714
+and send back to the browser a response for example a message,
+
+0:00:39.714,0:00:45.068
+then we can say that process or application in things web server.
+
+0:00:45.068,0:00:50.688
+Before we make such a web server, we need to check
+
+0:00:50.688,0:00:56.958
+if we have the answering dotnet version installed, if we don't, we need to install it.
+
+0:00:56.958,0:01:03.752
+We also need it, it is not mandatory, but it would be good to have one of the tools for creating web applications,
+
+0:01:03.752,0:01:11.135
+such as VS Code, and we will also install it, if necessary.
+ 
+
+0:01:11.135,0:01:20.996
+Now open the command prompt and move to the folder that will represent the root folder for this project.
+
+0:01:20.996,0:01:29.357
+We will now check if there is any version of dotnet installed
+
+0:01:29.357,0:01:38.240
+Let's type dotnet --version
+
+0:01:38.240,0:01:45.033
+Here we see that version 5.0 is installed here.
+
+0:01:45.033,0:01:50.839
+In case you don't need to go to Google on the appropriate site and download.
+
+0:01:50.839,0:01:55.734
+dotnet framework can be found at the following url:
+
+0:01:55.734,0:02:04.401
+Here, too, you need to find the appropriate version, the best recommended version that you need to download.
+
+0:02:04.401,0:02:10.638
+You can find the Visual Studio Code at the following url at:
+
+0:02:10.638,0:02:16.435
+and also, if necessary, download and install it. 
+
+0:02:16.435,0:02:24.225
+Let's create that web server now. We will use dotnet CLI. So, 
+
+0:02:24.225,0:02:32.586
+commands that are installed together with dotnet, for example to create a new application.
+
+0:02:32.586,0:02:40.424
+You can type: dotnet new web
+
+0:02:40.424,0:02:47.235
+After this, certain initial application files are created within the root folder.
+
+0:02:47.235,0:02:55.135
+Here we see now what the root folder of the application looks like. Some folders and files have been created.
+
+0:02:55.135,0:03:02.893
+To run this application now you need to type the command "dotnet run"
+
+0:03:04.008,0:03:10.225
+And now we see in the Command Prompt how executable files are created.
+
+0:03:12.080,0:03:19.165
+Here we see some information, for example, we see which web address should be typed in the browser to run server
+
+0:03:19.165,0:03:21.875
+to run server.
+
+0:03:22.489,0:03:25.719
+So, localhost:5000/
+
+0:03:25.719,0:03:29.200
+We will now open a web browser and 
+
+0:03:29.435,0:03:35.158
+type in the URL address bar the address you just saw: "localhost: 5000"
+
+0:03:35.686,0:03:39.155
+This is a request to the running web server
+
+0:03:40.013,0:03:43.962
+We see the answer we got, and that is the message “Hello World”.
+
+0:03:45.823,0:03:49.946
+We will now abort the process by pressing "ctrl + c"
+
+0:03:50.077,0:03:55.814
+To open the "visual studio code" and modify something in that code or review the existing one
+
+0:03:56.158,0:03:59.409
+we will type the command: "code .".
+
+0:04:02.938,0:04:10.725
+Sada se otvorio visual studio code. Vidimo sada sa leve strane u exploreru ovu aplikaciju 
+
+0:04:10.725,0:04:17.233
+Now the visual studio code has opened. We now see on the left in explorer this application called "simple web server". On the right we see the home page "Get Started".
+
+0:04:18.735,0:04:24.225
+Here we see the files of this application. The start is the "Program.cs" file.
+
+0:04:24.599,0:04:27.719
+Here you can see the Main method, which is also the beginning of the program,
+
+0:04:28.039,0:04:38.023
+where the Host environment is created. Here in this line we see that the "Startup.cs" file is used for the settings.
+
+0:04:39.769,0:04:43.938
+And here we have two characteristic methods. The first is ConfigureServis().
+
+0:04:43.938,0:04:49.068
+In it, we add services that will be available in the application, 
+
+0:04:49.068,0:04:51.269
+or in some classes within the application.
+
+0:04:51.269,0:04:55.189
+The second method is Configure (), which instructs the application 
+
+0:04:55.538,0:04:57.308
+or server what to do.
+
+0:04:57.308,0:05:00.911
+In this line we see that the GET request is mapped
+
+0:05:01.288,0:05:08.770
+whose URL consists of a server call and a slash after that
+
+0:05:08.844,0:05:15.366
+Here we see how the answer is created. In this case, the answer is just the message "Hello world".
+
+0:05:15.818,0:05:22.849
+You saw this message in response to launching Google Chrome and calling localhost: 5000
+
+0:05:23.629,0:05:28.232
+We will add another method that will respond to the second GET request
+
+0:05:29.090,0:05:34.929
+Let's say we want to see the system time on the server.
+
+0:05:35.137,0:05:38.300
+We will now add another method.
+
+0:05:43.016,0:05:51.838
+For example, when "localhost: 5000 / time" is typed in the address bar,
+
+0:05:52.829,0:05:55.920
+the answer to get is system time.
+
+0:06:00.249,0:06:04.983
+We will now replace the text and enter "Time:"
+
+0:06:05.943,0:06:13.894
+And to get the system time we will need the DateTime class
+
+0:06:16.468,0:06:21.000
+The "Now ()" method of the previous class gives the system time and
+
+0:06:21.340,0:06:27.816
+we will also call "ToString ()" to display the time nicely as text
+
+0:06:31.636,0:06:33.636
+time
+
+0:06:34.334,0:06:37.032
+Let's start the server again now!
+
+0:06:39.068,0:06:46.510
+We will type the command "dotnet run", and then type the following command in the browser:
+
+0:06:54.154,0:07:00.569
+localhost:5000/time
+
+0:07:02.232,0:07:08.672
+And here we see what kind of answer was received, and that is the time on that server.
+
